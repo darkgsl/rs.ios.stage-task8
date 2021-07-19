@@ -14,9 +14,20 @@ typedef enum : NSUInteger {
   landscape
 } Drawings;
 
+typedef enum : NSUInteger {
+  idle,
+  draw,
+  done
+} ScreenState;
+
 
 NS_ASSUME_NONNULL_BEGIN
+extern BOOL isDraw;
 extern Drawings globalPicture;
+extern ScreenState screenState;
+extern NSMutableArray *colorsButtonArrat;
+extern NSMutableArray<UIColor *> *colors;
+extern NSMutableSet *colorsButtonSet;
 //extern NSInteger ffff;
 @interface RootViewController :  UIViewController
 

@@ -10,10 +10,10 @@
 
 @interface SecondViewController ()
 
-@property (weak, nonatomic) IBOutlet UIButton *planetButton;
-@property (weak, nonatomic) IBOutlet UIButton *headButton;
-@property (weak, nonatomic) IBOutlet UIButton *treeButton;
-@property (weak, nonatomic) IBOutlet UIButton *landscapeButton;
+@property (weak, nonatomic) IBOutlet DRWButton *planetButton;
+@property (weak, nonatomic) IBOutlet DRWButton *headButton;
+@property (weak, nonatomic) IBOutlet DRWButton *treeButton;
+@property (weak, nonatomic) IBOutlet DRWButton *landscapeButton;
 
 @end
 
@@ -40,16 +40,16 @@
 - (void)setupButtons {
   
 //переделать . сделать кастом button
-  self.planetButton.tintColor = [UIColor colorNamed:@"LightGreenSea"];
-  self.planetButton.layer.masksToBounds = NO;
-  self.planetButton.layer.cornerRadius = 10;
-  self.planetButton.layer.borderWidth = 1;
-  self.planetButton.layer.borderColor = [UIColor blackColor].CGColor;
-  self.planetButton.layer.borderColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.25].CGColor;
+ // self.planetButton.tintColor = [UIColor colorNamed:@"LightGreenSea"];
+ // self.planetButton.layer.masksToBounds = NO;
+ // self.planetButton.layer.cornerRadius = 10;
+ // self.planetButton.layer.borderWidth = 1;
+  //self.planetButton.layer.borderColor = [UIColor blackColor].CGColor;
+ // self.planetButton.layer.borderColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.25].CGColor;
  // self.planetButton.layer.borderColor = [UIColor colorNamed:@"LightGreenSea"].CGColor;
-  self.planetButton.titleLabel.font = [UIFont fontWithName:@"Montserrat-Medium" size:18.0];
+ // self.planetButton.titleLabel.font = [UIFont fontWithName:@"Montserrat-Medium" size:18.0];
   
-  
+  /*
   self.headButton.tintColor = [UIColor colorNamed:@"LightGreenSea"];
   self.headButton.layer.masksToBounds = NO;
   self.headButton.layer.cornerRadius = 10;
@@ -74,7 +74,7 @@
  // self.landscapeButton.layer.borderColor = [UIColor colorNamed:@"LightGreenSea"].CGColor;
   self.landscapeButton.titleLabel.font = [UIFont fontWithName:@"Montserrat-Medium" size:18.0];
   
-  
+*/
 //  float shadowSize = 10.0f;
 //  UIBezierPath *shadowPath = [UIBezierPath bezierPathWithRect:CGRectMake(self.landscapeButton.frame.origin.x - shadowSize / 2,
 //                                                                         self.landscapeButton.frame.origin.y - shadowSize / 2,
@@ -93,12 +93,7 @@
 //  self.landscapeButton.layer.shadowRadius = 2.0;
 //  self.landscapeButton.layer.shadowOffset = CGSizeZero;
 //  self.landscapeButton.layer.shadowOpacity = 1;
-  
-  
-  
 
-  
-  
   [ self.planetButton addTarget:self
                             action:@selector(choosePicture:)
                   forControlEvents:UIControlEventTouchDown];
@@ -114,24 +109,32 @@
   
 }
 -(void) updateStatusButton {
-  
-  self.landscapeButton.layer.borderColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.25].CGColor;
-  self.treeButton.layer.borderColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.25].CGColor;
-  self.headButton.layer.borderColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.25].CGColor;
-  self.planetButton.layer.borderColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.25].CGColor;
+//  self.landscapeButton.layer.borderColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.25].CGColor;
+//  self.treeButton.layer.borderColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.25].CGColor;
+//  self.headButton.layer.borderColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.25].CGColor;
+//  self.planetButton.layer.borderColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.25].CGColor;
+  [self.landscapeButton setState:active];
+  [self.treeButton setState:active];
+  [self.headButton setState:active];
+  [self.planetButton setState:active];
   
   switch (globalPicture) {
     case planet:
-      self.planetButton.layer.borderColor = [UIColor colorNamed:@"LightGreenSea"].CGColor;
+      [self.planetButton setState:highlighted];
+      
+     // self.planetButton.layer.borderColor = [UIColor colorNamed:@"LightGreenSea"].CGColor;
       break;
     case head:
-      self.headButton.layer.borderColor = [UIColor colorNamed:@"LightGreenSea"].CGColor;
+      [self.headButton setState:highlighted];
+     // self.headButton.layer.borderColor = [UIColor colorNamed:@"LightGreenSea"].CGColor;
       break;
     case tree:
-      self.treeButton.layer.borderColor = [UIColor colorNamed:@"LightGreenSea"].CGColor;
+      [self.treeButton setState:highlighted];
+     // self.treeButton.layer.borderColor = [UIColor colorNamed:@"LightGreenSea"].CGColor;
       break;
     case landscape:
-      self.landscapeButton.layer.borderColor = [UIColor colorNamed:@"LightGreenSea"].CGColor;
+      [self.landscapeButton setState:highlighted];
+     // self.landscapeButton.layer.borderColor = [UIColor colorNamed:@"LightGreenSea"].CGColor;
       break;
       
     default:
@@ -164,6 +167,7 @@
       break;
   }
   [self updateStatusButton];
+  [self.navigationController popToRootViewControllerAnimated:YES];
 }
 /*
  #pragma mark - Navigation

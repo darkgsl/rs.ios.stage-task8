@@ -11,9 +11,25 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RootViewController">
             <connections>
-                <outlet property="drawButton" destination="cfx-iY-QSc" id="EfW-hx-cg0"/>
-                <outlet property="shareButton" destination="mSc-Vg-SoS" id="vEx-2Z-0Cu"/>
+                <outlet property="OpenTimerButton" destination="Qo2-fK-YAt" id="eKZ-kZ-2s5"/>
+                <outlet property="drawButton" destination="mSc-Vg-SoS" id="w0f-By-kTQ"/>
+                <outlet property="openPaletteButton" destination="my8-e6-tcY" id="4em-8q-All"/>
+                <outlet property="palleteView" destination="mIS-Lp-t3M" id="gYU-Ve-Dws"/>
+                <outlet property="savePalleteButton" destination="OcD-Z3-LDr" id="s16-Ky-X8Z"/>
+                <outlet property="shareButton" destination="hoP-yM-2am" id="xpV-Hl-Zgx"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="Ttq-PX-Vrj"/>
+                <outletCollection property="paletteButtons" destination="t54-rT-vTF" id="WdZ-ib-ewI"/>
+                <outletCollection property="paletteButtons" destination="jzA-KJ-UCe" id="ztb-2A-5gV"/>
+                <outletCollection property="paletteButtons" destination="oeU-ZB-fPX" id="OR5-J4-bgK"/>
+                <outletCollection property="paletteButtons" destination="aIe-MG-FHb" id="mtj-4L-exs"/>
+                <outletCollection property="paletteButtons" destination="j3p-rJ-i8h" id="xCy-2P-ulP"/>
+                <outletCollection property="paletteButtons" destination="zpV-AZ-zjU" id="xg8-ag-tGZ"/>
+                <outletCollection property="paletteButtons" destination="0Oo-nW-oOC" id="Ifs-mt-GGb"/>
+                <outletCollection property="paletteButtons" destination="eOC-lD-c7k" id="jPZ-f1-rMF"/>
+                <outletCollection property="paletteButtons" destination="6J2-G1-93n" id="LaP-X0-BcJ"/>
+                <outletCollection property="paletteButtons" destination="ovb-jQ-hwC" id="HFk-Jo-UcU"/>
+                <outletCollection property="paletteButtons" destination="Z8y-Se-dWM" id="VgK-NK-M3u"/>
+                <outletCollection property="paletteButtons" destination="oo6-EU-kM9" id="L8r-9T-HW8"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -21,46 +37,128 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="my8-e6-tcY">
-                    <rect key="frame" x="164" y="581" width="166" height="32"/>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="my8-e6-tcY" customClass="DRWButton">
+                    <rect key="frame" x="20" y="454" width="163" height="32"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                    <state key="normal" title="Test">
-                        <color key="titleColor" systemColor="labelColor"/>
-                    </state>
-                    <connections>
-                        <action selector="testButton:" destination="-1" eventType="touchUpInside" id="ed1-Rx-09n"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cfx-iY-QSc">
-                    <rect key="frame" x="99" y="553" width="36" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Draw"/>
+                    <inset key="contentEdgeInsets" minX="21" minY="0.0" maxX="21" maxY="0.0"/>
+                    <state key="normal" title="Open Palette"/>
                 </button>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o27-Ku-2cz">
                     <rect key="frame" x="38" y="102" width="300" height="300"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mSc-Vg-SoS" customClass="DRWButton">
-                    <rect key="frame" x="261" y="484" width="46" height="30"/>
-                    <state key="normal" title="Button"/>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mSc-Vg-SoS" customClass="DRWButton">
+                    <rect key="frame" x="243" y="454" width="91" height="32"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <inset key="contentEdgeInsets" minX="18" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="Draw"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hoP-yM-2am" customClass="DRWButton">
+                    <rect key="frame" x="243" y="506" width="91" height="32"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <inset key="contentEdgeInsets" minX="18" minY="0.0" maxX="10" maxY="0.0"/>
+                    <state key="normal" title="Share"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qo2-fK-YAt" customClass="DRWButton">
+                    <rect key="frame" x="20" y="506" width="168" height="32"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                    <inset key="contentEdgeInsets" minX="21" minY="0.0" maxX="21" maxY="0.0"/>
+                    <state key="normal" title="Open Timer"/>
+                </button>
+                <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mIS-Lp-t3M">
+                    <rect key="frame" x="0.0" y="375" width="375" height="292"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t54-rT-vTF" customClass="PaletteButton">
+                            <rect key="frame" x="17" y="92" width="40" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.81113535169999995" green="0.25941970939999998" blue="0.24375730749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </button>
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jzA-KJ-UCe" customClass="PaletteButton">
+                            <rect key="frame" x="77" y="92" width="40" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.12628829480000001" green="0.35742956399999998" blue="0.78592777250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </button>
+                        <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j3p-rJ-i8h" customClass="PaletteButton">
+                            <rect key="frame" x="257" y="92" width="40" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.55119246239999997" green="0.52398067709999996" blue="0.90646064280000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal">
+                                <color key="titleColor" red="0.81113535169999995" green="0.25941970939999998" blue="0.24375730749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zpV-AZ-zjU" customClass="PaletteButton">
+                            <rect key="frame" x="317" y="92" width="40" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.93344277139999998" green="0.51724994179999995" blue="0.44462692739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="0.93344277139999998" green="0.51724994179999995" blue="0.44462692739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal">
+                                <color key="titleColor" red="0.93344277139999998" green="0.51724994179999995" blue="0.44462692739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OcD-Z3-LDr" customClass="DRWButton">
+                            <rect key="frame" x="250" y="20" width="85" height="32"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Save"/>
+                        </button>
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oeU-ZB-fPX" customClass="PaletteButton">
+                            <rect key="frame" x="137" y="92" width="40" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.23216423389999999" green="0.44242346290000001" blue="0.21673250199999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </button>
+                        <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aIe-MG-FHb" customClass="PaletteButton">
+                            <rect key="frame" x="197" y="92" width="40" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.50190937520000001" green="0.5019869804" blue="0.50189876560000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </button>
+                        <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Oo-nW-oOC" customClass="PaletteButton">
+                            <rect key="frame" x="17" y="152" width="40" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.9584459662" green="0.66373771429999995" blue="0.38227015730000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </button>
+                        <button opaque="NO" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eOC-lD-c7k" customClass="PaletteButton">
+                            <rect key="frame" x="77" y="152" width="40" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.26836240290000002" green="0.71312505010000005" blue="0.91411608460000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </button>
+                        <button opaque="NO" tag="10" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z8y-Se-dWM" customClass="PaletteButton">
+                            <rect key="frame" x="257" y="152" width="40" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.11120108519999999" green="0.19555112720000001" blue="0.094984568660000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </button>
+                        <button opaque="NO" tag="11" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oo6-EU-kM9" customClass="PaletteButton">
+                            <rect key="frame" x="317" y="152" width="40" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.34672296050000001" green="0.10732731970000001" blue="0.091894544659999994" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </button>
+                        <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6J2-G1-93n" customClass="PaletteButton">
+                            <rect key="frame" x="137" y="152" width="40" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.92756241559999997" green="0.54458075760000002" blue="0.64980083700000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </button>
+                        <button opaque="NO" tag="9" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ovb-jQ-hwC" customClass="PaletteButton">
+                            <rect key="frame" x="197" y="152" width="40" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.052856527270000002" green="0.1850553751" blue="0.23090890049999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cfx-iY-QSc">
+                    <rect key="frame" x="304" y="424" width="30" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="test"/>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-            <constraints>
-                <constraint firstItem="mSc-Vg-SoS" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="484" id="YYn-y4-CSE"/>
-                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="mSc-Vg-SoS" secondAttribute="bottom" constant="153" id="ZEG-7f-6tG"/>
-                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="mSc-Vg-SoS" secondAttribute="trailing" constant="68" id="rJH-Sq-aIe"/>
-            </constraints>
             <point key="canvasLocation" x="-52" y="114.69265367316342"/>
         </view>
     </objects>
     <resources>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

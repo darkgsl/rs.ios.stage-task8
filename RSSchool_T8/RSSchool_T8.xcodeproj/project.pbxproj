@@ -22,6 +22,7 @@
 		D6A68B1626A1784400074F87 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D6A68B1426A1784400074F87 /* Montserrat-Medium.ttf */; };
 		D6A68B1726A1784400074F87 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D6A68B1526A1784400074F87 /* Montserrat-Regular.ttf */; };
 		D6A68B1D26A1B9C400074F87 /* CustomUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A68B1C26A1B9C300074F87 /* CustomUIView.m */; };
+		D6E6615726A4907200D3D13D /* PaletteButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E6615626A4907200D3D13D /* PaletteButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,8 @@
 		D6A68B1526A1784400074F87 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		D6A68B1B26A1B9C300074F87 /* CustomUIView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomUIView.h; sourceTree = "<group>"; };
 		D6A68B1C26A1B9C300074F87 /* CustomUIView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomUIView.m; sourceTree = "<group>"; };
+		D6E6615526A4907200D3D13D /* PaletteButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaletteButton.h; sourceTree = "<group>"; };
+		D6E6615626A4907200D3D13D /* PaletteButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaletteButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +83,6 @@
 		D65F61EA26A0BB9200F9EB2F /* RSSchool_T8 */ = {
 			isa = PBXGroup;
 			children = (
-				D6A68B0326A1503E00074F87 /* enums */,
 				D65F620C26A0BC0000F9EB2F /* ViewControllers */,
 				D65F620926A0BBE100F9EB2F /* LaunchScreen */,
 				D65F620526A0BBB400F9EB2F /* Supporting files */,
@@ -133,13 +135,6 @@
 			name = ModalViewController;
 			sourceTree = "<group>";
 		};
-		D6A68B0326A1503E00074F87 /* enums */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = enums;
-			sourceTree = "<group>";
-		};
 		D6A68B0526A1564200074F87 /* SecondViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +150,8 @@
 			children = (
 				D6A68B0F26A1642100074F87 /* DRWButton.h */,
 				D6A68B1026A1642100074F87 /* DRWButton.m */,
+				D6E6615526A4907200D3D13D /* PaletteButton.h */,
+				D6E6615626A4907200D3D13D /* PaletteButton.m */,
 				D6A68B1B26A1B9C300074F87 /* CustomUIView.h */,
 				D6A68B1C26A1B9C300074F87 /* CustomUIView.m */,
 			);
@@ -249,6 +246,7 @@
 				D65F61ED26A0BB9200F9EB2F /* AppDelegate.m in Sources */,
 				D6A68B1D26A1B9C400074F87 /* CustomUIView.m in Sources */,
 				D6A68B1126A1642100074F87 /* DRWButton.m in Sources */,
+				D6E6615726A4907200D3D13D /* PaletteButton.m in Sources */,
 				D6A68B0926A1567F00074F87 /* SecondViewController.m in Sources */,
 				D65F61FE26A0BB9A00F9EB2F /* main.m in Sources */,
 			);
