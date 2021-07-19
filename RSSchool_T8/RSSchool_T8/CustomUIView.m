@@ -1,9 +1,3 @@
-//
-//  CustomUIView.m
-//  RSSchool_T8
-//
-//  Created by Sergey Gomolko on 7/16/21.
-//
 
 #import "CustomUIView.h"
 
@@ -12,24 +6,9 @@
 @end
 @implementation CustomUIView
 
-- (instancetype)init
-{
-  self = [super init];
-  if (self) {
-    
-  }
-  return self;
-}
-
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect {
   if (isDraw) {
   
-  for (NSInteger i = 0; i < colorsButtonArrat.count; i += 1) {
-    UIButton *button = colorsButtonArrat[i];
-    NSLog(@"%@", button.layer.backgroundColor);
-  }
 
   self.array = [NSMutableArray new];
   NSMutableArray *array2 = [NSMutableArray new];
@@ -66,7 +45,6 @@
   bezier2Path.lineCapStyle = kCGLineCapRound;
   [bezier2Path stroke];
   
-  
   UIColor* strokeColor3 = colors[2];
   UIBezierPath* bezier3Path = self.array[2];
   [strokeColor3 setStroke];
@@ -74,8 +52,6 @@
   bezier3Path.miterLimit = 4;
   bezier3Path.lineCapStyle = kCGLineCapRound;
   [bezier3Path stroke];
- 
-  
   } else {
     UIBezierPath* bezierPath = [UIBezierPath bezierPath];
     UIColor* strokeColor = colors[0];
@@ -87,7 +63,6 @@
 
 -(NSArray*)drawHead{
   
-  //UIBezierPath* bezier3Path = [UIBezierPath bezierPath];
   UIBezierPath* bezierPath = [UIBezierPath bezierPath];
   [bezierPath moveToPoint: CGPointMake(61.5, 29)];
   [bezierPath addLineToPoint: CGPointMake(77, 89)];
@@ -197,14 +172,9 @@
   [bezier3Path addLineToPoint: CGPointMake(158.5, 279)];
   
   NSArray * array = [[NSArray alloc] initWithObjects:bezierPath, bezier2Path,bezier3Path, nil];
-  
-  
-  
-  
 return array;
 }
 -(NSArray*)drawTree{
-
   UIBezierPath* bezierPath = [UIBezierPath bezierPath];
   [bezierPath moveToPoint: CGPointMake(213.19, 65.76)];
   [bezierPath addCurveToPoint: CGPointMake(217, 56.5) controlPoint1: CGPointMake(215.57, 63.25) controlPoint2: CGPointMake(217, 60.02)];
@@ -293,12 +263,11 @@ return array;
   [bezier4Path moveToPoint: CGPointMake(209.49, 246.25)];
   [bezier4Path addCurveToPoint: CGPointMake(244.25, 247.75) controlPoint1: CGPointMake(221.08, 243.08) controlPoint2: CGPointMake(244.25, 238.95)];
   [bezier4Path addCurveToPoint: CGPointMake(227.25, 255.75) controlPoint1: CGPointMake(244.25, 256.55) controlPoint2: CGPointMake(228.58, 254.92)];
-
+  
   NSArray * array = [[NSArray alloc] initWithObjects:bezierPath, bezier3Path,bezier4Path, nil];
   return array;
 }
 -(NSArray*)drawLandscape{
-
   UIBezierPath* bezierPath = [UIBezierPath bezierPath];
   [bezierPath moveToPoint: CGPointMake(249, 134)];
   [bezierPath addLineToPoint: CGPointMake(255.5, 143.5)];
@@ -887,7 +856,6 @@ return array;
   [bezier3Path addLineToPoint: CGPointMake(74.5, 242)];
   [bezier3Path closePath];
 
- 
   [bezier3Path moveToPoint: CGPointMake(35.5, 76.5)];
   [bezier3Path addCurveToPoint: CGPointMake(41.5, 72) controlPoint1: CGPointMake(37.33, 75) controlPoint2: CGPointMake(41.1, 72)];
   [bezier3Path addLineToPoint: CGPointMake(48, 71)];
@@ -916,5 +884,4 @@ return array;
   NSArray * array = [[NSArray alloc] initWithObjects:bezierPath, bezier2Path,bezier3Path, nil];
   return array;
 }
-
 @end

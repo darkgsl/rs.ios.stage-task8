@@ -1,9 +1,3 @@
-//
-//  ModalViewController.m
-//  RSSchool_T8
-//
-//  Created by Sergey Gomolko on 7/15/21.
-//
 
 #import "ModalViewController.h"
 
@@ -11,17 +5,12 @@
 //MARK: - IBOutlet
 @property (weak, nonatomic) IBOutlet DRWButton *saveButton;
 @property (weak, nonatomic) IBOutlet UIView *supportView;
-
-
 @property (strong, nonatomic) IBOutletCollection(PaletteButton) NSArray *palleteButtons;
 
 @end
 
 @implementation ModalViewController
 
-- (void)willMoveToParentViewController:(UIViewController *)parent{
-  
-}
 - (instancetype)init
 {
   self = [super init];
@@ -44,32 +33,48 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   [self addActions];
+  //[self updateStatusButton];
   
 }
+- (void)viewWillAppear:(BOOL)animated{
+  [self updateStatusButton];
+}
+
 //MARK: - config buttons
 -(void) addActions{
   [self.saveButton addTarget:self action:@selector(savePalletePressed) forControlEvents:UIControlEventTouchUpInside];
   
   for (UIButton *button in self.palleteButtons) {
-    
     [button addTarget:self
                action:@selector(paletteButtonPressed:) forControlEvents:(UIControlEventTouchUpInside)];
-    
   }
-  
+}
+- (void)viewWillLayoutSubviews{
+  //[self updateStatusButton];
 }
 //MARK: - selectors
+-(void) updateStatusButton{
+  for (UIButton *buttonFromStorage in colorsButtonArrat) {
+    for (UIButton *palleteButton in self.palleteButtons) {
+      if ([buttonFromStorage.backgroundColor isEqual:palleteButton.backgroundColor])
+        palleteButton.layer.borderWidth = 1;
+    }
+  }
+};
+
 -(void) savePalletePressed{
   [self willMoveToParentViewController:nil];
   [self.view removeFromSuperview];
   [self removeFromParentViewController];
 }
+
 -(void) paletteButtonPressed:(PaletteButton *)sender{
   if ((colorsButtonSet.count <= 2) && (![colorsButtonSet containsObject:sender])) {
+    sender.layer.borderWidth = 1;
     [colorsButtonSet addObject:sender];
     [colorsButtonArrat addObject:sender];
     
-    sender.layer.borderWidth = 1;
+    
   } else if ([colorsButtonSet containsObject:sender]) {
     [colorsButtonSet removeObject:sender];
     //[self.colorsButtonArrat indexOfObject:sender];
@@ -81,13 +86,15 @@
   } else if (colorsButtonSet.count == 3) {
     PaletteButton *button = [colorsButtonArrat objectAtIndex:0];
     
+    button.layer.borderWidth = 8;
     [colorsButtonSet removeObject:button];
     [colorsButtonArrat removeObject:button];
-    button.layer.borderWidth = 8;
     
+    
+    sender.layer.borderWidth = 1;
     [colorsButtonSet addObject:sender];
     [colorsButtonArrat addObject:sender];
-    sender.layer.borderWidth = 1;
+    
   }
 }
 @end

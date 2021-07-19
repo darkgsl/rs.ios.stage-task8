@@ -1,9 +1,3 @@
-//
-//  CustomUIView.h
-//  RSSchool_T8
-//
-//  Created by Sergey Gomolko on 7/16/21.
-//
 
 #import <UIKit/UIKit.h>
 #import "RootViewController.h"

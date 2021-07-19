@@ -1,9 +1,3 @@
-//
-//  ModalViewController.h
-//  RSSchool_T8
-//
-//  Created by Sergey Gomolko on 7/15/21.
-//
 
 #import <UIKit/UIKit.h>
 #import "DRWButton.h"
