@@ -10,6 +10,7 @@
 #import "SecondViewController.h"
 #import "DRWButton.h"
 #import "PaletteButton.h"
+#import "RSSchool_T8-Swift.h"
 
 //NSInteger ffff = 0;
 //MARK: - global property
@@ -46,6 +47,9 @@ BOOL isDraw = false;
   colorsButtonSet = [NSMutableSet new];
   colorsButtonArrat = [NSMutableArray new];
   
+  
+  TestSwiftClass *df =  [TestSwiftClass new];
+  [df printName];
 }
 //MARK: - config canvas view
 - (void)setupView {
@@ -199,6 +203,8 @@ BOOL isDraw = false;
 //MARK: - Selectors navigation bar
 - (void)nextTapped:(id)sender {
   SecondViewController *viewController = [SecondViewController new];
+  viewController.drawning = globalPicture;
+  
   [self.navigationController pushViewController:viewController animated:YES];
 }
 

@@ -16,8 +16,9 @@
 		D65F621A26A0BE9500F9EB2F /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D65F621926A0BE9500F9EB2F /* Storyboard.storyboard */; };
 		D65F622326A0CA0B00F9EB2F /* ModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D65F622126A0CA0B00F9EB2F /* ModalViewController.m */; };
 		D65F622426A0CA0B00F9EB2F /* ModalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D65F622226A0CA0B00F9EB2F /* ModalViewController.xib */; };
-		D68B2C0226A5F41F0022B574 /* DrawningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68B2C0026A5F41F0022B574 /* DrawningViewController.swift */; };
-		D68B2C0326A5F41F0022B574 /* DrawningViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D68B2C0126A5F41F0022B574 /* DrawningViewController.xib */; };
+		D6625C9226A6B4F0009159F7 /* TestSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6625C9126A6B4F0009159F7 /* TestSwift.swift */; };
+		D6625CA126A6B8E6009159F7 /* 2222.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6625CA026A6B8E6009159F7 /* 2222.swift */; };
+		D6625CA426A6B8FA009159F7 /* ViewControllerЫцшае.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6625CA326A6B8FA009159F7 /* ViewControllerЫцшае.swift */; };
 		D6A68B0926A1567F00074F87 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A68B0726A1567F00074F87 /* SecondViewController.m */; };
 		D6A68B0A26A1567F00074F87 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6A68B0826A1567F00074F87 /* SecondViewController.xib */; };
 		D6A68B1126A1642100074F87 /* DRWButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A68B1026A1642100074F87 /* DRWButton.m */; };
@@ -42,8 +43,10 @@
 		D65F622026A0CA0B00F9EB2F /* ModalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModalViewController.h; sourceTree = "<group>"; };
 		D65F622126A0CA0B00F9EB2F /* ModalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModalViewController.m; sourceTree = "<group>"; };
 		D65F622226A0CA0B00F9EB2F /* ModalViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModalViewController.xib; sourceTree = "<group>"; };
-		D68B2C0026A5F41F0022B574 /* DrawningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawningViewController.swift; sourceTree = "<group>"; };
-		D68B2C0126A5F41F0022B574 /* DrawningViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrawningViewController.xib; sourceTree = "<group>"; };
+		D6625C9126A6B4F0009159F7 /* TestSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSwift.swift; sourceTree = "<group>"; };
+		D6625CA026A6B8E6009159F7 /* 2222.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2222.swift; sourceTree = "<group>"; };
+		D6625CA326A6B8FA009159F7 /* ViewControllerЫцшае.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewControllerЫцшае.swift"; sourceTree = "<group>"; };
+		D6625CA626A6BAEE009159F7 /* RSSchool_T8-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "RSSchool_T8-Bridging-Header.h"; path = "RSSchool_T8/RSSchool_T8-Bridging-Header.h"; sourceTree = "<group>"; };
 		D6A68B0626A1567F00074F87 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		D6A68B0726A1567F00074F87 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		D6A68B0826A1567F00074F87 /* SecondViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
@@ -71,6 +74,7 @@
 		D65F61DF26A0BB9200F9EB2F = {
 			isa = PBXGroup;
 			children = (
+				D6625CA626A6BAEE009159F7 /* RSSchool_T8-Bridging-Header.h */,
 				D65F61EA26A0BB9200F9EB2F /* RSSchool_T8 */,
 				D65F61E926A0BB9200F9EB2F /* Products */,
 			);
@@ -143,8 +147,9 @@
 		D68B2BFA26A5F3490022B574 /* DrawingsScreenSwift */ = {
 			isa = PBXGroup;
 			children = (
-				D68B2C0026A5F41F0022B574 /* DrawningViewController.swift */,
-				D68B2C0126A5F41F0022B574 /* DrawningViewController.xib */,
+				D6625C9126A6B4F0009159F7 /* TestSwift.swift */,
+				D6625CA026A6B8E6009159F7 /* 2222.swift */,
+				D6625CA326A6B8FA009159F7 /* ViewControllerЫцшае.swift */,
 			);
 			name = DrawingsScreenSwift;
 			sourceTree = "<group>";
@@ -240,7 +245,6 @@
 			files = (
 				D6A68B1726A1784400074F87 /* Montserrat-Regular.ttf in Resources */,
 				D65F61FB26A0BB9A00F9EB2F /* LaunchScreen.storyboard in Resources */,
-				D68B2C0326A5F41F0022B574 /* DrawningViewController.xib in Resources */,
 				D65F622426A0CA0B00F9EB2F /* ModalViewController.xib in Resources */,
 				D65F621A26A0BE9500F9EB2F /* Storyboard.storyboard in Resources */,
 				D6A68B1626A1784400074F87 /* Montserrat-Medium.ttf in Resources */,
@@ -258,14 +262,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				D65F622326A0CA0B00F9EB2F /* ModalViewController.m in Sources */,
+				D6625C9226A6B4F0009159F7 /* TestSwift.swift in Sources */,
 				D65F621626A0BE4700F9EB2F /* RootViewController.m in Sources */,
+				D6625CA426A6B8FA009159F7 /* ViewControllerЫцшае.swift in Sources */,
 				D65F61ED26A0BB9200F9EB2F /* AppDelegate.m in Sources */,
 				D6A68B1D26A1B9C400074F87 /* CustomUIView.m in Sources */,
-				D68B2C0226A5F41F0022B574 /* DrawningViewController.swift in Sources */,
 				D6A68B1126A1642100074F87 /* DRWButton.m in Sources */,
 				D6E6615726A4907200D3D13D /* PaletteButton.m in Sources */,
 				D6A68B0926A1567F00074F87 /* SecondViewController.m in Sources */,
 				D65F61FE26A0BB9A00F9EB2F /* main.m in Sources */,
+				D6625CA126A6B8E6009159F7 /* 2222.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,6 +408,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = NO;
 				DEVELOPMENT_TEAM = M3TS3J4WQ3;
 				INFOPLIST_FILE = RSSchool_T8/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
@@ -411,7 +418,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Course.RSSchool.iOS.RSSchool-T8";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "RSSchool_T8/RSSchool_T8-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "RSSchool_T8-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -425,6 +432,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = NO;
 				DEVELOPMENT_TEAM = M3TS3J4WQ3;
 				INFOPLIST_FILE = RSSchool_T8/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
@@ -434,7 +442,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Course.RSSchool.iOS.RSSchool-T8";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "RSSchool_T8/RSSchool_T8-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "RSSchool_T8-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

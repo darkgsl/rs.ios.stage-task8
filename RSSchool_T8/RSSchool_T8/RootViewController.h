@@ -6,6 +6,8 @@
 //
 
 #import <UIKit/UIKit.h>
+//@class TestSwiftClass
+
 
 typedef enum : NSUInteger {
   planet,
@@ -20,6 +22,11 @@ typedef enum : NSUInteger {
   done
 } ScreenState;
 
+@protocol RootViewControllerDelegate <NSObject>
+
+@property (assign, nonatomic) Drawings drawning;
+
+@end
 
 NS_ASSUME_NONNULL_BEGIN
 extern BOOL isDraw;
@@ -31,6 +38,9 @@ extern NSMutableSet *colorsButtonSet;
 //extern NSInteger ffff;
 @interface RootViewController :  UIViewController
 
+//@property (weak, nonatomic) RootViewControllerDelegate* delegate;
 @end
+
+
 
 NS_ASSUME_NONNULL_END

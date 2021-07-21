@@ -13,6 +13,8 @@
 
 @implementation SecondViewController
 
+@synthesize drawning;
+
 - (void)viewDidLoad {
   [super viewDidLoad];
   [self setupNavigationItems];
@@ -47,7 +49,8 @@
   [self.headButton setState:active];
   [self.planetButton setState:active];
   
-  switch (globalPicture) {
+  //switch (globalPicture) {
+      switch (drawning) {
     case planet:
       [self.planetButton setState:highlighted];
       break;
@@ -74,16 +77,20 @@
   switch (picture) {
     case planet:
       globalPicture = planet;
+      drawning = planet;
       //NSLog(@"planet");
       break;
     case tree:
       globalPicture = tree;
+      drawning = tree;
       break;
     case head:
       globalPicture = head;
+      drawning = head;
       break;
     case landscape:
       globalPicture = landscape;
+      drawning = landscape;
       break;
       
     default:
@@ -93,4 +100,6 @@
   [self updateStatusButton];
   [self.navigationController popToRootViewControllerAnimated:YES];
 }
+
+
 @end

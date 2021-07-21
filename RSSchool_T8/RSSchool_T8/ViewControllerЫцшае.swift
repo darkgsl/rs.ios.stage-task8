@@ -1,25 +1,20 @@
 //
-//  DrawningViewController.swift
+//  ViewControllerЫцшае.swift
 //  RSSchool_T8
 //
-//  Created by Sergey Gomolko on 7/19/21.
+//  Created by Sergey Gomolko on 7/20/21.
 //
 
-import DRWButton.h
 import UIKit
 
-class DrawningViewController: UIViewController {
+class ViewController_____: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-      setupNavigationItems()
 
         // Do any additional setup after loading the view.
     }
-  func setupNavigationItems(){
-    let button: DRWButton = DRWButton();
     
-  }
 
     /*
     // MARK: - Navigation
